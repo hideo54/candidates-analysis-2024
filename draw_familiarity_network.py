@@ -1,3 +1,4 @@
+#%%
 import collections
 
 import japanize_matplotlib
@@ -59,6 +60,8 @@ edge_widths = [10 * G[u][v]['weight'] / party_candidates_count[u] for u, v in G.
 spring_layout_seed = 16 # これはかなりシードゲー。矢印が重ならない・近い政党が近く配置される、を条件に 0-20 を見て決めた
 pos = nx.spring_layout(G, k=10, seed=spring_layout_seed)
 
+plt.figure(figsize=(8, 6))
+
 nx.draw(
     G,
     pos,
@@ -88,5 +91,6 @@ plt.figtext(
     horizontalalignment='center',
     fontsize=10,
 )
-# plt.show()
-plt.savefig('familiarity-network.png')
+plt.savefig('familiarity-network.png', bbox_inches='tight')
+
+# %%
