@@ -1,4 +1,3 @@
-#%%
 import collections
 
 import japanize_matplotlib
@@ -92,5 +91,3 @@ plt.figtext(
     fontsize=10,
 )
 plt.savefig('familiarity-network.png', bbox_inches='tight')
-
-# %%
